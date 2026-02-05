@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-skywings-blue: #0077B6;
+  --color-skywings-navy: #03045E;
+  --color-skywings-gold: #FFD700;
+  
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-gray-900 bg-white;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .glass-morphism {
+    @apply bg-white/90 backdrop-blur-md border border-white/20;
+  }
+  .glass-morph-nav {
+    @apply bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-sm;
+  }
+}
